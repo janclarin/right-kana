@@ -9,8 +9,7 @@ class KanaTable extends Component {
       <div>
       {
         kanaGrid.map(kanaRow => {
-          // Uses the row's first kana's romaji as the key.
-          const key = kanaRow[0]['romaji'];
+          const key = kanaRow[0].romaji;
           return <KanaBoxRow key={key} kanaRow={kanaRow} />;
         })
       }
