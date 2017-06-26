@@ -3,15 +3,15 @@ import KanaBox from './KanaBox';
 
 class KanaBoxRow extends Component {
   render() {
-    const { kanaRow, showHiragana } = this.props;
-    const kanaType = showHiragana ? 'hiragana' : 'katakana';
+    const { kanaRow } = this.props;
 
     return (
       <div>
       {
         kanaRow.map(kana => {
+          // Uses the kana's romaji as the key.
           const romaji = kana['romaji'];
-          return <KanaBox key={romaji} kana={kana[kanaType]} romaji={romaji} />;
+          return <KanaBox key={romaji} kana={kana['kana']} romaji={romaji} />;
         })
       }
       </div>

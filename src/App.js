@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 import { PageHeader } from 'react-bootstrap';
 import './App.css';
-import { KANA } from './constants/kana';
 import Toggle from './Toggle';
 import KanaTable from './KanaTable';
+import { HIRAGANA, KATAKANA } from './constants/kana';
 
 class App extends Component {
   constructor(props) {
@@ -20,15 +20,21 @@ class App extends Component {
     this.setState({showHiragana: showHiragana});
   }
 
+  getKanaGrid() {
+    return this.state.showHiragana ? HIRAGANA : KATAKANA;
+  }
+
   render() {
-    const activeToggleIndex = this.state.showHiragana ? 0 : 1;
+    var activeToggleIndex = this.state.showHiragana ? 0 : 1;
+    var kanaGrid = this.getKanaGrid();
+
     return (
       <div className="App">
         <PageHeader>Right Kana</PageHeader>
         <Toggle toggleTitles={this.kanaTypeTitles}
                 activeToggleIndex={activeToggleIndex}
                 onSelectionChange={this.handleKanaToggleChange}/>
-        <KanaTable kanaGrid={KANA} showHiragana={this.state.showHiragana} />
+        <KanaTable kanaGrid={kanaGrid} />
       </div>
     );
   }
