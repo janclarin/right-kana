@@ -2,6 +2,16 @@ import React, { Component } from 'react';
 import KanaBox from './KanaBox';
 
 class KanaTable extends Component {
+  constructor(props) {
+    super(props);
+    this.handleItemOnClick = this.handleItemOnClick.bind(this);
+    this.renderRow = this.renderRow.bind(this);
+  }
+
+  handleItemOnClick(kana, romaji) {
+    this.props.onItemClick(kana, romaji);
+  }
+
   renderRow(kanaRow) {
     return (
       <div key={kanaRow[0].romaji}>
@@ -10,6 +20,7 @@ class KanaTable extends Component {
             key={kana.romaji + index}
             kana={kana.kana}
             romaji={kana.romaji}
+            onClick={() => this.handleItemOnClick(kana)}
           />
         ))}
       </div>
