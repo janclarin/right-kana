@@ -32,7 +32,7 @@ class App extends Component {
 
     return (
       <div className="App">
-        <PageHeader>Right Kana</PageHeader>
+        <h1><small>Right Kana</small></h1>
         <Toggle toggleTitles={this.kanaTypeTitles}
                 selectedToggleIndex={this.getToggleSelectionIndex()}
                 onSelectionChange={this.handleKanaToggleChange}/>
