@@ -6,7 +6,7 @@ class KanaBox extends Component {
     const { kana, romaji } = this.props;
     const style = {
       width: 50,
-      height: 66
+      height: 72
     }
 
     return (
