@@ -31,10 +31,14 @@ class App extends Component {
 
     return (
       <div className="App">
-        <h1><small>Right Kana</small></h1>
-        <Toggle toggleTitles={this.kanaTypeTitles}
-                selectedToggleIndex={this.getToggleSelectionIndex()}
-                onSelectionChange={this.handleKanaToggleChange}/>
+        <h1>
+          <small>Right Kana</small>
+        </h1>
+        <Toggle
+          toggleTitles={this.kanaTypeTitles}
+          selectedToggleIndex={this.getToggleSelectionIndex()}
+          onSelectionChange={this.handleKanaToggleChange}
+        />
         <KanaTable kanaGrid={this.getKanaGrid()} />
       </div>
     );

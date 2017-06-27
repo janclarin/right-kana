@@ -7,7 +7,7 @@ class KanaBox extends Component {
     const style = {
       width: 50,
       height: 72
-    }
+    };
 
     return (
       <Button style={style} disabled={!kana}>
