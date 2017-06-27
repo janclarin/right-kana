@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { ButtonToolbar } from 'react-bootstrap';
 import KanaBox from './KanaBox';
 
 class KanaBoxRow extends Component {
@@ -7,12 +8,12 @@ class KanaBoxRow extends Component {
 
     return (
       <div>
-      {
-        kanaRow.map(kana => {
-          const romaji = kana.romaji;
-          return <KanaBox key={romaji} kana={kana.kana} romaji={romaji} />;
-        })
-      }
+        {
+          kanaRow.map((kana, index) => {
+            const key = kana.romaji + index;
+            return <KanaBox key={key} kana={kana.kana} romaji={kana.romaji} />;
+          })
+        }
       </div>
     );
   }
