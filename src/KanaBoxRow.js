@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import { ButtonToolbar } from 'react-bootstrap';
 import KanaBox from './KanaBox';
 
 class KanaBoxRow extends Component {

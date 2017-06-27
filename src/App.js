@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import { PageHeader } from 'react-bootstrap';
 import './App.css';
 import Toggle from './Toggle';
 import KanaTable from './KanaTable';
