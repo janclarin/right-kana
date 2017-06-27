@@ -8,20 +8,20 @@ class Toggle extends Component {
   }
 
   render() {
-    const { toggleTitles, activeToggleIndex } = this.props;
+    const { toggleTitles, selectedToggleIndex } = this.props;
     return (
       <ButtonGroup>
-        {
-          toggleTitles.map((toggleTitle, index) => {
-            return (
-              <Button key={index}
-                      onClick={() => this.handleSelectionChange(index)}
-                      active={index === activeToggleIndex}>
-                {toggleTitle}
-              </Button>
-            )
-          })
-        }
+      {
+        toggleTitles.map((toggleTitle, index) => {
+          return (
+            <Button key={index}
+                    onClick={() => this.handleSelectionChange(index)}
+                    active={index === selectedToggleIndex}>
+              {toggleTitle}
+            </Button>
+          )
+        })
+      }
       </ButtonGroup>
     );
   }

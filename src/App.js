@@ -20,21 +20,23 @@ class App extends Component {
     this.setState({showHiragana: showHiragana});
   }
 
+  getToggleSelectionIndex() {
+    return this.state.showHiragana ? 0 : 1;
+  }
+
   getKanaGrid() {
     return this.state.showHiragana ? HIRAGANA : KATAKANA;
   }
 
   render() {
-    var activeToggleIndex = this.state.showHiragana ? 0 : 1;
-    var kanaGrid = this.getKanaGrid();
 
     return (
       <div className="App">
         <PageHeader>Right Kana</PageHeader>
         <Toggle toggleTitles={this.kanaTypeTitles}
-                activeToggleIndex={activeToggleIndex}
+                selectedToggleIndex={this.getToggleSelectionIndex()}
                 onSelectionChange={this.handleKanaToggleChange}/>
-        <KanaTable kanaGrid={kanaGrid} />
+        <KanaTable kanaGrid={this.getKanaGrid()} />
       </div>
     );
   }
