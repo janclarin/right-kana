@@ -12,7 +12,7 @@ class App extends Component {
       showHiragana: true
     };
     this.handleKanaToggleChange = this.handleKanaToggleChange.bind(this);
-    this.kanaTypeTitles = ['Hiragana', 'Katakana'];
+    this.kanaTypeTitles = ['か', 'カ'];
   }
 
   handleKanaToggleChange(kanaToggleIndex) {
