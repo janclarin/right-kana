@@ -61,14 +61,15 @@ class App extends Component {
     const { kana, romaji, gifUrl } = this.state.selectedTableItem;
     return (
       <div className="App">
+        <Toggle
+        toggleTitles={kanaTypeTitles}
+        selectedToggleIndex={this.getToggleSelectionIndex()}
+        onSelectionChange={this.handleToggleChange}
+        className="pull-right"
+        />
         <h1>
           <small>Right Kana</small>
         </h1>
-        <Toggle
-          toggleTitles={kanaTypeTitles}
-          selectedToggleIndex={this.getToggleSelectionIndex()}
-          onSelectionChange={this.handleToggleChange}
-        />
         <KanaTable
           kanaGrid={this.getKanaGrid()}
           onItemClick={this.handleTableItemClick}
