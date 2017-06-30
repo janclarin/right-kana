@@ -5,6 +5,7 @@ class KanaTable extends Component {
   constructor(props) {
     super(props);
     this.handleItemOnClick = this.handleItemOnClick.bind(this);
+    this.renderBox = this.renderBox.bind(this);
     this.renderRow = this.renderRow.bind(this);
   }
 
@@ -12,19 +13,22 @@ class KanaTable extends Component {
     this.props.onItemClick(kana, romaji);
   }
 
-  renderRow(kanaRow) {
+  renderBox(kana, index) {
+    const kanaChar = kana ? kana.kana : '';
+    const kanaRomaji = kana ? kana.romaji : '';
+
     return (
-      <div key={kanaRow[0].romaji}>
-        {kanaRow.map((kana, index) => (
-          <KanaBox
-            key={kana.romaji + index}
-            kana={kana.kana}
-            romaji={kana.romaji}
-            onClick={() => this.handleItemOnClick(kana)}
-          />
-        ))}
-      </div>
-    )
+      <KanaBox
+        key={kanaRomaji + index}
+        kana={kanaChar}
+        romaji={kanaRomaji}
+        onClick={() => this.handleItemOnClick(kana)}
+      />
+    );
+  }
+
+  renderRow(kanaRow) {
+    return <div key={kanaRow[0].romaji}>{kanaRow.map(this.renderBox)}</div>;
   }
 
   render() {
