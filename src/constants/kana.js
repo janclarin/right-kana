@@ -58,24 +58,24 @@ export const HIRAGANA = [
   ],
   [
     { 'romaji': 'ya', 'kana': 'や'},
-    { 'romaji': '', 'kana': ''},
+    null,
     { 'romaji': 'yu', 'kana': 'ゆ'},
-    { 'romaji': '', 'kana': ''},
+    null,
     { 'romaji': 'yo', 'kana': 'よ'},
   ],
   [
     { 'romaji': 'wa', 'kana': 'わ'},
-    { 'romaji': '', 'kana': ''},
-    { 'romaji': '', 'kana': ''},
-    { 'romaji': '', 'kana': ''},
+    null,
+    null,
+    null,
     { 'romaji': 'wo', 'kana': 'を'},
   ],
   [
     { 'romaji': 'n', 'kana': 'ん'},
-    { 'romaji': '', 'kana': ''},
-    { 'romaji': '', 'kana': ''},
-    { 'romaji': '', 'kana': ''},
-    { 'romaji': '', 'kana': ''},
+    null,
+    null,
+    null,
+    null,
   ]
 ];
 
@@ -138,23 +138,23 @@ export const KATAKANA = [
   ],
   [
     { 'romaji': 'ya', 'kana': 'ヤ' },
-    { 'romaji': '', 'kana': ''},
+    null,
     { 'romaji': 'yu', 'kana': 'ユ' },
-    { 'romaji': '', 'kana': ''},
+    null,
     { 'romaji': 'yo', 'kana': 'ヨ' },
   ],
   [
     { 'romaji': 'wa', 'kana': 'ワ' },
-    { 'romaji': '', 'kana': ''},
-    { 'romaji': '', 'kana': ''},
-    { 'romaji': '', 'kana': ''},
+    null,
+    null,
+    null,
     { 'romaji': 'wo', 'kana': 'ヲ' },
   ],
   [
     { 'romaji': 'n', 'kana': 'ン' },
-    { 'romaji': '', 'kana': ''},
-    { 'romaji': '', 'kana': ''},
-    { 'romaji': '', 'kana': ''},
-    { 'romaji': '', 'kana': ''},
+    null,
+    null,
+    null,
+    null,
   ]
 ];
